@@ -2,14 +2,14 @@
 
 Aplikacja udostępnia wymienione poniżej endpointy:</br>
 
-/getall/sorteddesc #1       : zwraca listę artykułów posortowanych malejąco według daty publikacji.</br>
+/getall/sorteddesc #1    | zwraca listę artykułów posortowanych malejąco według daty publikacji.</br>
 
-/get/{id}                |: zwracający pojedynczy artykuł po id.</br>
-/findby/{keyWord}        |: zwracający listę wszystkich artykułów prasowych po słowie kluczowym zawartym w tytule lub treści publikacji.</br>
-/save saveArticle        |: pozwalający na zapis artykułu prasowego. W ciele żądania zawieramy obiekt Article w formacie JSON jak w przykładzie poniżej.
+/get/{id}                | zwracający pojedynczy artykuł po id.</br>
+/findby/{keyWord}        | zwracający listę wszystkich artykułów prasowych po słowie kluczowym zawartym w tytule lub treści publikacji.</br>
+/save saveArticle        | pozwalający na zapis artykułu prasowego. W ciele żądania zawieramy obiekt Article w formacie JSON jak w przykładzie poniżej.
                              Data zapisu oraz publikacji artykułu będzie wprowadzona automatycznie. Id artykułu jest zawsze generowane przez bazę danych.</br>
-/update/{author}/{title} |: aktualizacja istniejącego artykułu prasowego. Po wprowadzeniu aktualizacji data publikacji zostanie zmieniona automatycznie.</br>  
-/delete/{author}/{title} |: usuwanie wybranego artykułu prasowego.</br>
+/update/{author}/{title} | aktualizacja istniejącego artykułu prasowego. Po wprowadzeniu aktualizacji data publikacji zostanie zmieniona automatycznie.</br>  
+/delete/{author}/{title} | usuwanie wybranego artykułu prasowego.</br>
 
 Warstwą zapisu danych jest baza MySql. Po uruchomieniu aplikacji baza będzie pusta dlatego wymagane jest wypełnić ją danymi przesyłając artykuły przez
 dostępny endpoint /save. W trakcie zapisu imię autora nie może mieć mniej niż 3 litery a także nie może być puste. Tytuł a także zawartość artykułu
